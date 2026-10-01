@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#930004","secondary-container":"#ea000d","secondary":"#bc0008","on-surface-variant":"#3c494a","on-secondary-container":"#fffbff","surface-tint":"#00696e","primary-fixed":"#6bf6ff","inverse-on-surface":"#f3f0ef","on-tertiary-fixed":"#00210b","on-tertiary-fixed-variant":"#005225","surface-container-low":"#f6f3f2","on-error":"#ffffff","on-tertiary":"#ffffff","surface-variant":"#e5e2e1","on-secondary-fixed":"#410001","surface-dim":"#dcd9d9","surface-container":"#f0edec","tertiary-fixed":"#7bfc9d","on-error-container":"#93000a","on-background":"#1c1b1b","on-primary-fixed":"#002022","secondary-fixed":"#ffdad5","primary-container":"#00c2cb","primary":"#00696e","inverse-surface":"#313030","surface-container-high":"#ebe7e7","on-primary-container":"#004a4e","on-tertiary-container":"#004e22","primary-fixed-dim":"#3edae3","secondary-fixed-dim":"#ffb4a9","inverse-primary":"#3edae3","surface-container-highest":"#e5e2e1","error-container":"#ffdad6","tertiary":"#006d33","on-primary":"#ffffff","on-secondary":"#ffffff","outline-variant":"#bbc9ca","tertiary-container":"#42c76f","error":"#ba1a1a","surface-container-lowest":"#ffffff","on-surface":"#1c1b1b","on-primary-fixed-variant":"#004f53","background":"#fcf8f8","surface":"#fcf8f8","outline":"#6c7a7a","tertiary-fixed-dim":"#5ddf83","surface-bright":"#fcf8f8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","space-lg":"1.5rem","margin":"2rem","margin-mobile":"1rem","gutter":"1rem","space-md":"1rem","space-xs":"0.25rem"},"fontFamily":{"headline-sm":["Outfit"],"headline-md":["Outfit"],"headline-lg":["Outfit"],"body-md":["Inter"],"display-lg-mobile":["Outfit"],"label-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"display-lg":["Outfit"],"body-lg":["Inter"],"headline-lg-mobile":["Outfit"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["30px",{"lineHeight":"38px","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-lg"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-lg"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Super Admin Platform</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-[0_2px_8px_-2px_rgba(10,10,10,0.04)]"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-[0_2px_8px_-2px_rgba(10,10,10,0.04)]" data-path="global-overview" href="#"><span class="material-symbols-outlined text-primary">dashboard</span><span>Global Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors" data-path="franchisee-management" href="#"><span class="material-symbols-outlined text-primary">storefront</span><span>Franchisee Management</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors" data-path="vendor-onboarding-&amp;-kyc" href="#"><span class="material-symbols-outlined text-primary">verified_user</span><span>Vendor Onboarding &amp; KYC</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors" data-path="routes-&amp;-stoppages" href="#"><span class="material-symbols-outlined text-primary">alt_route</span><span>Routes &amp; Stoppages</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors" data-path="platform-rules-&amp;-fees" href="#"><span class="material-symbols-outlined text-primary">rule_settings</span><span>Platform Rules &amp; Fees</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md transition-colors" data-path="system-reports-&amp;-audit" href="#"><span class="material-symbols-outlined text-primary">query_stats</span><span>System Reports &amp; Audit</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary">shield</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">SECURITY LEVEL</span><span class="font-label-md text-label-md text-on-surface">Tier 1 Master</span></div></div><span class="material-symbols-outlined text-on-surface-variant">lock</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Project_Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VySyGaI8wAAPC6SYf-jjD5TERh30ohPBiiDJ3IELZ2-6FOKy5WsL2ALPtS4hSFDCLhwPvsS66KGF2uUOvmsK1kgorRfjIrqXl_61AlVcnErDZDokxz0azPh4IZBIEQY68Bt1qQWj83ezFfolNwOLir32ZVhAL9J26yue_iodLzQhTXQhPcUSMayGWnqGKwPYij9r8n8-FkEBpqlZiPs6hJE09jVPj-Iw50yOkpnEYI9gH5IdSaSX8uhXjd2O0TqZdm4euI0Tg4OFQ"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">JUSTALO Admin Master Control</span></div><div class="relative flex items-center w-80"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-sm">search</span><input class="w-full bg-surface-container-low pl-9 pr-4 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search entities, nodes, transit IDs..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-tertiary-container">System Operational</span></div><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface">Super Admin</span><span class="font-label-sm text-label-sm text-on-surface-variant">Master Console</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Ui5MAWH3FKUTwZml5ziF2zWT6T6sAHkqpt3VK4Vsf4D23ECLGooYsJVruAxdwAaz-fvJdjwJEHMrqC7JMXAfidI7LV3XuFAPyYQP34jHHNX1AauLXV8WFP0Xu1NCsy-mJyTXQLF7Nxny8q0mHCfSa4SOukcqF8fIBQU9npJlOJResQYyqz8jgCJ5zm7W8J3Hz1cwBYhEHpd9l3a7biS1-4akupfKs8uzm4024dsThC2LSGRD32ev8VNq-m"/></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg pb-space-xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Global Controls & Scoping Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span>JUSTALO Platform Admin</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Master Governance Console</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-0.5">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Cross-City Operations Control</h1>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<span>Admin Global Override Active: Unrestricted Visibility</span>
+</div>
+</div>
+</div>
+<!-- Hub Scope & Live Filter Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative flex items-center bg-surface-container-low rounded-xl px-space-md py-2">
+<span class="material-symbols-outlined text-primary text-sm mr-2">hub</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Regional Scope</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-4">
+<option selected="" value="all">All Franchisees &amp; Hubs (5 Central Regions)</option>
+<option value="ind">Indore Metropolitan Hub (FR-IND-01)</option>
+<option value="bhp">Bhopal Capital Corridor (FR-BHP-02)</option>
+<option value="ujj">Ujjain Pilgrimage Hub (FR-UJJ-03)</option>
+<option value="jbp">Jabalpur Mahakoshal (FR-JBP-04)</option>
+<option value="gwl">Gwalior Chambal Node (FR-GWL-05)</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low rounded-xl px-space-md py-2.5">
+<span class="material-symbols-outlined text-tertiary text-sm">nest_clock_farsight_analog</span>
+<span class="font-label-md text-label-md text-on-surface">Today / Live Real-Time</span>
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-container animate-pulse ml-1"></span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high rounded-xl text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Scoped Filter</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-secondary text-on-secondary rounded-xl font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-sm">security_update_warning</span>
+<span>Emergency Broadcast</span>
+</button>
+</div>
+</div>
+<!-- Executive Metric KPI Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- GMV -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Gross GMV (Today)</span>
+<div class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-base">payments</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight">₹48,65,200</div>
+<div class="flex items-center gap-1 mt-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+14.2% DoD vs Yesterday</span>
+</div>
+</div>
+</div>
+<!-- Active Live Buses -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Active Fleet Live</span>
+<div class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-base">directions_bus</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">342</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Buses Tracking</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>98.6% On-Schedule Telematics</span>
+</div>
+</div>
+</div>
+<!-- Franchisee Hubs -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Franchisee Nodes</span>
+<div class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-base">domain</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight">5 Regional Hubs</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1 truncate">
+          Indore, Bhopal, Ujjain, JBP, GWL
+        </div>
+</div>
+</div>
+<!-- Verified Vendors -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Verified Fleet Vendors</span>
+<div class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight">128 Operators</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+          Chartered, Hans, Bagdi, +125
+        </div>
+</div>
+</div>
+<!-- Convenience Fee Net -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Convenience Revenue</span>
+<div class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight">₹4,12,800</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold mt-1">
+          Platform Take: Fixed ₹25/seat
+        </div>
+</div>
+</div>
+<!-- SOS / Emergency -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Fleet SOS &amp; Security</span>
+<div class="p-1.5 rounded-lg bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-base">format_image_left</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-tertiary">0 Active</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Alerts</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+          Socket Pings 99.98% Latency &lt;40ms
+        </div>
+</div>
+</div>
+</div>
+<!-- Bento Section 1: Multi-City Franchisee Governance & Scoping Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low/40">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Regional Franchisee Scoping &amp; Yield Hub</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">5 Hubs Configured</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Master administrative control for margin distribution, fleet limits, and immediate franchise-level override.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export Settlement Sheet</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-sm">add_business</span>
+<span>Provision New Hub</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-md px-space-lg">Franchisee Hub Node</th>
+<th class="py-space-md px-space-md">Live Buses</th>
+<th class="py-space-md px-space-md">Today's Hub GMV</th>
+<th class="py-space-md px-space-md">Avg Occupancy</th>
+<th class="py-space-md px-space-md">Hub Share / P&amp;L</th>
+<th class="py-space-md px-space-md">Operational Status</th>
+<th class="py-space-md px-space-lg text-right">Master Override Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Indore -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+                  IN
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Indore Metropolitan Hub</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: FR-IND-01 • Nodal: Malwa Expressways Ltd.</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface">46 Units</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹14.82 Lakh</span>
+<span class="block font-label-sm text-label-sm text-tertiary">+18.4% vs L.W.</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-32">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span>86.4%</span>
+<span class="text-on-surface-variant">Cap: 90%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 86.4%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹1.77 Lakh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contract: 12.0% Flat</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Healthy Optimal
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="View Scoped Audit" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-primary-container text-on-surface-variant hover:text-on-primary-container transition-colors" title="Edit Margin %" type="button">
+<span class="material-symbols-outlined text-sm">percent</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" type="button">
+                  Override Scoping
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Bhopal -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+                  BH
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Bhopal Capital Corridor</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: FR-BHP-02 • Nodal: Raja Bhoj Mobility SPV</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface">38 Units</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹12.40 Lakh</span>
+<span class="block font-label-sm text-label-sm text-tertiary">+9.1% vs L.W.</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-32">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span>84.1%</span>
+<span class="text-on-surface-variant">Cap: 88%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84.1%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹1.48 Lakh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contract: 12.0% Flat</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Healthy Optimal
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="View Scoped Audit" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-primary-container text-on-surface-variant hover:text-on-primary-container transition-colors" title="Edit Margin %" type="button">
+<span class="material-symbols-outlined text-sm">percent</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" type="button">
+                  Override Scoping
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Ujjain -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary font-headline-sm text-headline-sm">
+                  UJ
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Ujjain Pilgrimage Hub</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: FR-UJJ-03 • Nodal: Mahakal Transit Corp</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface">24 Units</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹8.90 Lakh</span>
+<span class="block font-label-sm text-label-sm text-secondary font-bold">Surge +31.2%</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-32">
+<div class="flex justify-between font-label-sm text-label-sm mb-1 text-secondary font-bold">
+<span>91.5%</span>
+<span>Over-Index</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 91.5%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹1.06 Lakh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contract: 12.0% Flat</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Peak Flow Dynamic
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="View Scoped Audit" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-primary-container text-on-surface-variant hover:text-on-primary-container transition-colors" title="Edit Margin %" type="button">
+<span class="material-symbols-outlined text-sm">percent</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" type="button">
+                  Override Scoping
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Jabalpur -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant font-headline-sm text-headline-sm">
+                  JB
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Jabalpur Mahakoshal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: FR-JBP-04 • Nodal: Narmada Express Link</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface">18 Units</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹5.75 Lakh</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Steady +2.4%</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="w-32">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span>78.0%</span>
+<span class="text-on-surface-variant">Cap: 85%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹0.69 Lakh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contract: 12.0% Flat</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Normal Operations
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="View Scoped Audit" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-primary-container text-on-surface-variant hover:text-on-primary-container transition-colors" title="Edit Margin %" type="button">
+<span class="material-symbols-outlined text-sm">percent</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" type="button">
+                  Override Scoping
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Bento Section 2: Split Controls: Vendor KYC Queue & Platform Rules Engine -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Left Column: Vendor Onboarding & KYC Approval Queue (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Vendor Onboarding &amp; KYC Verification</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Review statutory transport documentation, All-India permits, and fitness certs.</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">2 Pending Super Admin Clearance</span>
+</div>
+<!-- Item 1: Narmada Travels -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Narmada Travels Mandleshwar</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Fleet Size: 6 Buses</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Submitted via Indore Regional Hub • 4 Hours Ago</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Awaiting Master Approval
+          </span>
+</div>
+<!-- Document Badges -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">task_alt</span> RC Master Verification
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">task_alt</span> All-India Tourist Permit
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">task_alt</span> Vehicle Fitness (RTO MP-09)
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">task_alt</span> GSTIN Validation: Active
+          </span>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-1">
+<button class="px-space-md py-1.5 rounded-xl bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+            Inspect Documents
+          </button>
+<button class="px-space-md py-1.5 rounded-xl bg-surface-container text-error hover:bg-error-container font-label-md text-label-md transition-colors" type="button">
+            Reject with Reason
+          </button>
+<button class="px-space-md py-1.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 shadow-sm transition-opacity" type="button">
+            Approve &amp; Activate Fleet
+          </button>
+</div>
+</div>
+<!-- Item 2: Malwa Queen Logistics -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Malwa Queen Logistics (Pvt Ltd)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Fleet Size: 12 AC Sleepers</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Submitted via Bhopal Capital Corridor • 6 Hours Ago</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+            Documents Cleared
+          </span>
+</div>
+<!-- Documents -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">verified</span> State Stage Carriage Permit
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">verified</span> AIS-140 GPS Integrated
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-sm">verified</span> Comprehensive Passenger Cover
+          </span>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-1">
+<button class="px-space-md py-1.5 rounded-xl bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+            Audit Log
+          </button>
+<button class="px-space-md py-1.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 shadow-sm transition-opacity" type="button">
+            Dispatch Operating Authorization
+          </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Global Platform Rules & Fees Engine (5 cols) -->
+<div class="xl:col-span-5 flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">rule_settings</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Platform Rules &amp; Fee Engine</span>
+</div>
+<span class="p-1 px-2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Live Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Adjust central monetization formulas, system cut-offs, and IoT refresh rates dynamically across the state.
+        </p>
+<!-- Form fields -->
+<div class="space-y-space-md mt-space-xs">
+<!-- Admin Convenience Fee -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex justify-between">
+<span>Admin Convenience Fee / Passenger</span>
+<span class="text-primary font-semibold">Current: ₹25.00</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-3 text-on-surface-variant font-label-md text-label-md">₹</span>
+<input class="w-full h-11 pl-8 pr-4 rounded-xl bg-surface-container-low font-label-lg text-label-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" type="text" value="25.00"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Appended universally onto all operator base tickets.</span>
+</div>
+<!-- Cancellation Cutoff -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex justify-between">
+<span>Universal 100% Refund Cutoff</span>
+<span class="text-primary font-semibold">25 Minutes</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-4 rounded-xl bg-surface-container-low font-label-lg text-label-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" type="number" value="25"/>
+<span class="absolute right-3 top-3 text-on-surface-variant font-label-md text-label-md">Minutes prior</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Time threshold before passenger cancellation enters partial forfeiture.</span>
+</div>
+<!-- Insurance Surcharge -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex justify-between">
+<span>Accidental Transit Insurance Surcharge</span>
+<span class="text-primary font-semibold">₹15.00</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-3 text-on-surface-variant font-label-md text-label-md">₹</span>
+<input class="w-full h-11 pl-8 pr-4 rounded-xl bg-surface-container-low font-label-lg text-label-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" type="text" value="15.00"/>
+</div>
+</div>
+<!-- Live Socket Frequency -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex justify-between">
+<span>Socket.IO GPS Telematics Ping Rate</span>
+<span class="text-tertiary font-semibold">8 Seconds</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-4 rounded-xl bg-surface-container-low font-label-lg text-label-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" type="number" value="8"/>
+<span class="absolute right-3 top-3 text-on-surface-variant font-label-md text-label-md">Seconds</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Save CTA -->
+<div class="pt-space-md mt-space-md">
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">cloud_sync</span>
+<span>Save &amp; Deploy Rules Platform-Wide</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Section 3: Live System Audit Trail & Telematics Health -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Audit Trail Table (8 cols) -->
+<div class="xl:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">history</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Platform Immutable System Audit Log</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span>Listening to WebSocket Event Stream</span>
+</div>
+</div>
+<!-- Feed -->
+<div class="flex flex-col divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Log 1 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-tertiary mt-0.5">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Vendor Operator KYC Approved: Hans Travels Fleet (6 Units)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Actor: superadmin_master (ID: 00921) • Scoped Corridor: Bhopal - Indore Highway</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">14:28:12 IST</span>
+</div>
+<!-- Log 2 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-primary mt-0.5">
+<span class="material-symbols-outlined text-sm">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Franchisee Settlement Auto-Disbursed: FR-IND-01</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Amount: ₹1,77,840.00 • ICICI Escrow Clearing Ref: TXN-MP-9843211</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">14:15:00 IST</span>
+</div>
+<!-- Log 3 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-secondary mt-0.5">
+<span class="material-symbols-outlined text-sm">price_change</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Dynamic Surge Cap Adjusted: Ujjain - Dewas Corridor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Modified from 1.25x to 1.40x due to Simhastha preparatory pilgrim surge</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">13:42:19 IST</span>
+</div>
+<!-- Log 4 -->
+<div class="py-space-sm flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-sm">alt_route</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Stoppage Re-ordered: Jabalpur Station Bypass Stop #4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Highway diversion protocol enabled by Regional Node FR-JBP-04</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">12:50:04 IST</span>
+</div>
+</div>
+</div>
+<!-- Telematics System Health Card (4 cols) -->
+<div class="xl:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Global Cluster Health</span>
+<span class="p-1 px-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Nominal 100%</span>
+</div>
+<!-- Live Server Status Bar -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Indore Core Server (Primary)</span>
+<span class="text-tertiary font-bold">24ms Latency</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 94%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Bhopal Regional Relay</span>
+<span class="text-tertiary font-bold">31ms Latency</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 88%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">AIS-140 GPS Socket Ingestion</span>
+<span class="text-primary font-bold">8,410 pings/min</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 79%;"></div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-sm mt-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">encrypted</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Audit Hash Chain Active</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SHA-256 Block Signature: #49F-2024-MP-CORE</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-sm">developer_board</span>
+<span>View Telemetry Raw Stream</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
