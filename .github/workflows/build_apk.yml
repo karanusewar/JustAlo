@@ -42,10 +42,7 @@ jobs:
       - name: Build Android Release APK
         run: |
           cd justalo_app
-          flutter build apk --release
-
-      - name: Find APK file location
-        run: find justalo_app/build -name "*.apk" 2>/dev/null || echo "No APK found"
+          flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
@@ -54,4 +51,4 @@ jobs:
           path: |
             justalo_app/build/app/outputs/flutter-apk/app-release.apk
             justalo_app/build/app/outputs/apk/release/app-release.apk
-          if-no-files-found: warn
+          if-no-files-found: error
