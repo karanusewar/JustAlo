@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Java JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -48,7 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: JustAlo-App-Release
-          path: |
-            justalo_app/build/app/outputs/flutter-apk/app-release.apk
-            justalo_app/build/app/outputs/apk/release/app-release.apk
-          if-no-files-found: error
+          path: justalo_app/build/app/outputs/flutter-apk/app-release.apk
