@@ -26,18 +26,24 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: '3.29.0'
-          cache: true
 
-      - name: Create Android local.properties
+      - name: Show environment info
         run: |
-          echo "flutter.sdk=$FLUTTER_ROOT" > justalo_app/android/local.properties
-          echo "sdk.dir=$ANDROID_HOME" >> justalo_app/android/local.properties
+          echo "FLUTTER_ROOT=$FLUTTER_ROOT"
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
+          flutter --version
+          java -version
+
+      - name: Create local.properties for Android
+        run: |
+          mkdir -p justalo_app/android
+          printf "flutter.sdk=%s\nsdk.dir=%s\n" "$FLUTTER_ROOT" "$ANDROID_HOME" > justalo_app/android/local.properties
           cat justalo_app/android/local.properties
 
-      - name: Verify Flutter installation
+      - name: Accept Android SDK licenses
         run: |
-          flutter --version
-          flutter doctor
+          yes | sdkmanager --licenses || true
 
       - name: Get Flutter dependencies
         run: |
@@ -47,9 +53,17 @@ jobs:
       - name: Build Android Release APK
         run: |
           cd justalo_app
-          flutter build apk --release
+          flutter build apk --release --verbose 2>&1 | tee /tmp/flutter_build.log
+          echo "Exit code: $?"
+
+      - name: Show build log on failure
+        if: failure()
+        run: |
+          echo "=== FLUTTER BUILD LOG ==="
+          cat /tmp/flutter_build.log | grep -E "error|Error|FAILED|Exception" | head -80
 
       - name: Upload APK Artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: JustAlo-App-Release.apk
