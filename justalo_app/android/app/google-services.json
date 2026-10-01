@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "534733579332",
+    "project_id": "justalo-34bcb",
+    "storage_bucket": "justalo-34bcb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534733579332:android:8c81986a4db9bc1cd1c811",
+        "android_client_info": {
+          "package_name": "com.example.justalo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKKopjUH9Oq6MP-9hyRmv-opbjMaYx8Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

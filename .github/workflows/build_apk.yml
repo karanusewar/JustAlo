@@ -26,10 +26,18 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: '3.29.0'
+          cache: true
 
       - name: Create Android local.properties
         run: |
           echo "flutter.sdk=$FLUTTER_ROOT" > justalo_app/android/local.properties
+          echo "sdk.dir=$ANDROID_HOME" >> justalo_app/android/local.properties
+          cat justalo_app/android/local.properties
+
+      - name: Verify Flutter installation
+        run: |
+          flutter --version
+          flutter doctor
 
       - name: Get Flutter dependencies
         run: |
@@ -39,7 +47,7 @@ jobs:
       - name: Build Android Release APK
         run: |
           cd justalo_app
-          flutter build apk --release --no-tree-shake-icons
+          flutter build apk --release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
